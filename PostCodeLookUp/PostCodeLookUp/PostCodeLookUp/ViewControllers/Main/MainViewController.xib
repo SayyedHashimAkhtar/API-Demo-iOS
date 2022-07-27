@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="PostCodeLookUp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-J1-n5Q">
+                    <rect key="frame" x="91" y="353" width="233" height="73"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="73" id="Yw3-Bu-63C"/>
+                    </constraints>
+                    <color key="tintColor" red="0.1058823529" green="0.16078431369999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="By Post Code"/>
+                    <connections>
+                        <action selector="findByPostCode" destination="-1" eventType="touchUpInside" id="OdW-Mq-9vt"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlf-Nc-A88">
+                    <rect key="frame" x="91" y="471" width="233" height="73"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="73" id="QmA-sm-qgE"/>
+                    </constraints>
+                    <color key="tintColor" red="0.1058823529" green="0.16078431369999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="By Partial Code"/>
+                    <connections>
+                        <action selector="findByOutCode" destination="-1" eventType="touchUpInside" id="lR9-pR-dAT"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Find an Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIN-jg-dOT">
+                    <rect key="frame" x="91" y="91" width="233" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ZZm-cI-R8Q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="28"/>
+                    <color key="textColor" red="0.1058823529" green="0.16078431369999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9Et-J1-n5Q" firstAttribute="trailing" secondItem="mlf-Nc-A88" secondAttribute="trailing" id="7Ng-bO-cRR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mlf-Nc-A88" secondAttribute="bottom" constant="318" id="AAq-Af-NEg"/>
+                <constraint firstItem="zIN-jg-dOT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="91" id="IUU-no-OUK"/>
+                <constraint firstItem="zIN-jg-dOT" firstAttribute="trailing" secondItem="9Et-J1-n5Q" secondAttribute="trailing" id="LVl-8U-qWm"/>
+                <constraint firstItem="zIN-jg-dOT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="47" id="PhN-lI-o7n"/>
+                <constraint firstItem="9Et-J1-n5Q" firstAttribute="leading" secondItem="mlf-Nc-A88" secondAttribute="leading" id="oul-dJ-Imy"/>
+                <constraint firstItem="zIN-jg-dOT" firstAttribute="leading" secondItem="9Et-J1-n5Q" secondAttribute="leading" id="tAn-hG-KbR"/>
+                <constraint firstItem="mlf-Nc-A88" firstAttribute="top" secondItem="9Et-J1-n5Q" secondAttribute="bottom" constant="45" id="vwO-tK-dUw"/>
+                <constraint firstItem="zIN-jg-dOT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yj0-X8-xb9"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="129.91071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
